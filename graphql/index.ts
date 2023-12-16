@@ -1,5 +1,5 @@
 export const getUserQuery = `
-    query GetUser($emial: String!) {
+    query GetUser($email: String!) {
         user(by: {email: $email}){
             id
             name
