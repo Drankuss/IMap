@@ -4,7 +4,7 @@ import { ChangeEvent, useState } from "react";
 import { SessionInterface } from "../common.types";
 import Image from "next/image";
 import FormField from "./FormField";
-import { categoryFilters } from "../constants";
+import { categoryFilters } from "../constant";
 import CustomMenu from "./CustomMenu";
 import Button from "./Button";
 import { createNewProject, fetchToken } from "../lib/actions";
@@ -17,6 +17,7 @@ type Props = {
 
 const ProjectForm = ({ type, session }: Props) => {
   const router = useRouter();
+
   const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -36,6 +37,7 @@ const ProjectForm = ({ type, session }: Props) => {
       setIsSubmitting(false);
     }
   };
+
   const handleChangeImage = (e: ChangeEvent<HTMLInputElement>) => {
     e.preventDefault();
 
@@ -57,6 +59,7 @@ const ProjectForm = ({ type, session }: Props) => {
       handleStateChange("image", result);
     };
   };
+
   const handleStateChange = (fieldName: string, value: string) => {
     setform((prevState) => ({ ...prevState, [fieldName]: value }));
   };

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { NavLinks } from "../constants";
+import { NavLinks } from "../constant";
 import AuthProviders from "./AuthProviders";
 import { getCurrentUser } from "../lib/session";
 import ProfileMenu from "./ProfileMenu";
