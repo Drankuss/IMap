@@ -6,5 +6,5 @@ const secret = process.env.NEXTAUTH_SECRET;
 export async function GET(req: NextRequest) {
   const token = await getToken({ req, secret, raw: true });
 
-  return NextResponse.json({ token }, { status: 200 });
+  return NextResponse.json({ token: token }, { status: 200 });
 }
