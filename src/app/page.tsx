@@ -15,7 +15,8 @@ type ProjectSearch = {
 };
 
 const Home = async () => {
-  const data = (await fetchAllProjects()) as ProjectSearch;
+  const data =
+    /* await */ fetchAllProjects() /* delete as unknown */ as unknown as ProjectSearch;
 
   const projectsToDisplay = data?.projectSearch?.edges || [];
 
@@ -24,7 +25,7 @@ const Home = async () => {
       <section className="flexStart flex-col paddings">
         Categories
         <p className="no-result-text text-center">
-          No projects found, go create some first.
+          No maps found, go create some first.
         </p>
       </section>
     );

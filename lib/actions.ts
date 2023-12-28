@@ -1,4 +1,4 @@
-import { GraphQLClient } from "graphql-request";
+import { GraphQLClient, RequestDocument } from "graphql-request";
 import {
   createProjectMutation,
   createUserMutation,
@@ -25,7 +25,7 @@ const client = new GraphQLClient(apiUrl);
 
 const makeGraphQLRequest = async (query: string, variables = {}) => {
   try {
-    return await client.request(query, variables);
+    return /* await */ client.request(query, variables);
   } catch (error) {
     throw error;
   }

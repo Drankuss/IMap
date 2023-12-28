@@ -1,9 +1,9 @@
 export const NavLinks = [
-  { href: "/", key: "Inspiration", text: "Inspiration" },
-  { href: "/", key: "Find Projects", text: "Find Projects" },
-  { href: "/", key: "Learn Development", text: "Learn Development" },
-  { href: "/", key: "Career Advancement", text: "Career Advancement" },
-  { href: "/", key: "Hire Developers", text: "Hire Developers" },
+  { href: "/", key: "Home", text: "Home" },
+  { href: "/maps", key: "Maps", text: "Maps" },
+  { href: "/games", key: "Games", text: "Games" },
+  { href: "/community", key: "Community", text: "Community" },
+  { href: "/about", key: "About", text: "About" },
 ];
 
 export const categoryFilters = [
@@ -22,30 +22,28 @@ export const categoryFilters = [
   "Chatbots",
 ];
 
+export const mapCategories = [
+  "Maps by Game",
+  "Popular Maps",
+  "Newly Added Maps",
+  "Community-Created Maps",
+];
+
 export const footerLinks = [
   {
-    title: "For developers",
+    title: "For Gamers",
     links: [
-      "Go Pro!",
-      "Explore development work",
-      "Development blog",
-      "Code podcast",
-      "Open-source projects",
+      "Join our gaming community",
+      "Explore popular games",
+      "Gameplay guides",
+      "Gaming blog",
       "Refer a Friend",
       "Code of conduct",
     ],
   },
   {
-    title: "Hire developers",
-    links: [
-      "Post a job opening",
-      "Post a freelance project",
-      "Search for developers",
-    ],
-  },
-  {
-    title: "Brands",
-    links: ["Advertise with us"],
+    title: "Map Creators",
+    links: ["Submit your maps", "Map creation resources", "Community showcase"],
   },
   {
     title: "Company",
@@ -55,40 +53,36 @@ export const footerLinks = [
       "Support",
       "Media kit",
       "Testimonials",
-      "API",
       "Terms of service",
-      "Privacy policy",
-      "Cookie policy",
     ],
   },
   {
-    title: "Directories",
+    title: "Game Tournaments",
     links: [
-      "Development jobs",
-      "Developers for hire",
-      "Freelance developers for hire",
-      "Tags",
-      "Places",
+      "Upcoming tournaments",
+      "Past tournament results",
+      "Join a tournament",
+      "Organize a tournament",
     ],
   },
   {
-    title: "Development assets",
+    title: "Game Merchandise",
     links: [
-      "Code Marketplace",
-      "GitHub Marketplace",
-      "NPM Registry",
-      "Packagephobia",
+      "Official game merchandise",
+      "Fan-made merchandise",
+      "Limited edition items",
     ],
   },
   {
-    title: "Development Resources",
+    title: "Game Reviews",
     links: [
-      "Freelancing",
-      "Development Hiring",
-      "Development Portfolio",
-      "Development Education",
-      "Creative Process",
-      "Development Industry Trends",
+      "Latest game reviews",
+      "Submit your game review",
+      "Community-rated games",
     ],
+  },
+  {
+    title: "Game Streaming",
+    links: ["Live game streams", "Featured streamers", "Stream your gameplay"],
   },
 ];
