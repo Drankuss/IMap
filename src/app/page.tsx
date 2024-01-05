@@ -25,7 +25,7 @@ const Home = async () => {
       <section className="flexStart flex-col paddings">
         Categories
         <p className="no-result-text text-center">
-          No maps found, go create some first.
+          No suggestions found, go create some first.
         </p>
       </section>
     );

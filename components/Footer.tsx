@@ -74,9 +74,9 @@ const Footer = () => {
       </div>
 
       <div className="flexBetween footer_copyright">
-        <p>@ 2023 IMap. All rights reserved</p>
+        <p>@ 2024 IMap. All rights reserved</p>
         <p className="text-gray">
-          <span className="text-black font-semibold">2137</span> views
+          <span className="text-black font-semibold">7312</span> views
         </p>
       </div>
     </footer>
