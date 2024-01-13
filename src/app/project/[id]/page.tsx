@@ -74,14 +74,6 @@ const Project = async ({ params: { id } }: { params: { id: string } }) => {
         </p>
 
         <div className="flex flex-wrap mt-5 gap-5">
-          <Link
-            href={projectDetails?.githubUrl}
-            target="_blank"
-            rel="noreferrer"
-            className="flexCenter gap-2 tex-sm font-medium text-primary-brown"
-          >
-            <span className="underline">Github</span>
-          </Link>
           <Image src="/dot.svg" width={4} height={4} alt="dot" />
           <Link
             href={projectDetails?.liveSiteUrl}
