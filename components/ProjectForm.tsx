@@ -11,7 +11,7 @@ import { createNewProject, fetchToken, updateProject } from "../lib/actions";
 import { useRouter } from "next/navigation";
 
 type Props = {
-  project: ProjectInterface;
+  project?: ProjectInterface;
   type: string;
   session: SessionInterface;
 };
