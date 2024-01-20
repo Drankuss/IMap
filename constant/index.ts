@@ -1,9 +1,6 @@
 export const NavLinks = [
   { href: "/", key: "Home", text: "Home" },
   { href: "/maps", key: "Maps", text: "Maps" },
-  { href: "/games", key: "Games", text: "Games" },
-  { href: "/community", key: "Community", text: "Community" },
-  { href: "/about", key: "About", text: "About" },
 ];
 
 export const categoryFilters = [
@@ -19,6 +16,17 @@ export const categoryFilters = [
   "Exploits",
   "ExampleA",
   "ExampleB",
+  "ExampleC",
+  "ExampleD",
+  "ExampleE",
+  "ExampleF",
+  "ExampleG",
+  "ExampleI",
+  "ExampleJ",
+  "ExampleK",
+  "ExampleL",
+  "ExampleM",
+  "ExampleO",
 ];
 
 export const mapCategories = [

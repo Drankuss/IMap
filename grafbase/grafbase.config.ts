@@ -1,4 +1,5 @@
 import { config, connector, graph, auth } from "@grafbase/sdk";
+import { AuthRules } from "@grafbase/sdk/dist/src/auth";
 
 const g = graph.Standalone();
 
@@ -11,31 +12,35 @@ const mongo = connector.MongoDB("MongoDB", {
 
 // @ts-ignore
 const User = g
-  .model("User", {
-    name: g.string().length({ min: 2, max: 100 }),
-    email: g.string().unique(),
-    avatarUrl: g.url(),
-    description: g.string().length({ min: 2, max: 1000 }).optional(),
-    projects: g
-      .relation(() => Project)
-      .list()
-      .optional(),
+  .type("User", {
+    fields: {
+      name: g.string(),
+      email: g.string(),
+      avatarUrl: g.url(),
+      description: g.string().optional(),
+      projects: g
+        .relation(() => Project)
+        .list()
+        .optional(),
+    },
   })
-  .auth((rules) => {
+  .auth((rules: AuthRules) => {
     rules.public().read();
   });
 
 // @ts-ignore
 const Project = g
-  .model("Project", {
-    title: g.string().length({ min: 3 }),
-    description: g.string(),
-    image: g.url(),
-    liveSiteUrl: g.url(),
-    category: g.string().search(),
-    createdBy: g.relation(() => User),
+  .type("Project", {
+    fields: {
+      title: g.string(),
+      description: g.string(),
+      image: g.url(),
+      liveSiteUrl: g.url(),
+      category: g.string().search(),
+      createdBy: g.relation(() => User),
+    },
   })
-  .auth((rules) => {
+  .auth((rules: AuthRules) => {
     rules.public().read();
     rules.private().create().delete().update();
   });
