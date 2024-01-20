@@ -1,4 +1,13 @@
-import { g, config, auth } from "@grafbase/sdk";
+import { config, connector, graph, auth } from "@grafbase/sdk";
+
+const g = graph.Standalone();
+
+const mongo = connector.MongoDB("MongoDB", {
+  apiKey: g.env("MONGODB_API_KEY"),
+  url: g.env("MONGODB_API_URL"),
+  dataSource: g.env("MONGODB_DATASOURCE"),
+  database: g.env("MONGODB_DATABASE"),
+});
 
 // @ts-ignore
 const User = g
@@ -36,10 +45,14 @@ const jwt = auth.JWT({
   secret: g.env("NEXTAUTH_SECRET"),
 });
 
+g.datasource(mongo);
+
 export default config({
   graph: g,
   auth: {
     providers: [jwt],
-    rules: (rules) => rules.private(),
+    rules: (rules) => {
+      rules.private();
+    },
   },
 });
